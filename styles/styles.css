@@ -2,28 +2,112 @@
     margin: 0;
     padding: 0;
 }
+
 @font-face {
-   font-family: 'Steppe-Book';
+    font-family: 'Steppe-Book';
     src: url("../fonts/Steppe-Book.ttf");
 }
+
 @font-face {
     font-family: 'Steppe-ExtraBold';
     src: url("../fonts/Steppe-ExtraBold.ttf");
 }
 
-body{
+body {
     background: #732B03;
-    font-family: 'Steppe-Book',sans-serif;
-    color: cornsilk;
+    font-family: 'Steppe-Book', sans-serif;
+    color: white;
 }
-.container{
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.header{
+.header {
     padding: 40px 0;
 }
-.header.container{
-    padding: 40px 0;
+
+.header .container {
+    display: flex; /*теперь эти три элемента в центре, выравнивание по вертикали по центру*/
+    align-items: center;
+}
+
+.logo img {
+    vertical-align: bottom; /*img тег, ровненько по центру - логтип наш картинка*/
+}
+
+.menu {
+    margin-left: 250px;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex; /* убрать точки у списка и в строку список*/
+    gap: 50px; /* между элементами оступ gap*/
+}
+
+.menu-item a {
+    font-size: 16px;
+    line-height: 130%; /* высота строки*/
+    text-decoration: none; /* убрать подчеркивание ссылки*/
+    cursor: pointer; /*кликающая рука наведение мыши*/
+    color: white;
+    transition: opacity 0.3s ease-out; /* Плавный переход для эффекта, время анимаци ease функция перехода) */
+
+}
+
+/* какие стили будут применяться при наведениии*/
+.menu-item a:hover {
+    opacity: 0.5; /* Значение прозрачности(opacity) для эффекта дымки */
+
+}
+
+.main-content {
+    padding-top: 169px;
+    padding-bottom: 200px;
+}
+
+.main-info {
+    max-width: 811px;
+}
+
+.main-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 90px;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    max-width: 697px;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 40px;
+}
+
+.button {
+    background-color: white;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    color: #732B03;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: burlywood;
+}
+
+.main-image {
+    position: absolute; /* виясящее сбоку */
+    top: 0;
+    right: 0;
+    z-index: -1; /*откинуть назад картинку*/
 }
